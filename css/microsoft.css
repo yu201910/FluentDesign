@@ -1,0 +1,768 @@
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* main{
+    width:100%;
+}
+
+section{
+    width:100%;
+} */
+/* container media */
+.container{
+    width:1536px;
+    margin:0px auto;
+}
+
+@media (max-width:1680px){
+    .container{
+        width:1336px;
+    }
+}
+
+@media (max-width:1460px){
+    .container{
+        width:1136px;
+    }
+}
+@media (max-width:1280px){
+    .container{
+        width:960px;
+    }
+}
+@media (max-width:1024px){
+    .container{
+        padding: 0px 30px;
+        width:100%;
+    }
+}
+/* nav */
+
+.navbar{
+    height:48px;
+    background-color: black;
+    color:white;
+}
+
+nav .container{
+    height: 100%;
+    display: flex;
+    align-items: center;    
+}
+.logo img{
+    width:15px;
+    height:15px;
+}
+.link-group{
+    display: flex;
+    margin: 0;
+    padding: 0 70px 0 120px;
+    list-style: none;
+    justify-content: space-between;       
+}
+.links{
+    flex-grow: 1;
+}
+.link-group li a{
+    color:white;
+    font-weight: 600;
+    text-decoration: none;   
+}
+.sitetitle h1 {
+    margin-left:166px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 49px;
+}
+.toggle{
+    display: none;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    height: 48px;
+    width: 48px;
+}
+.toggle span{
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    transition: all 200ms linear 0ms;       
+}
+.top-bar{
+    top: 17px;
+    left: 12px;
+    transform: rotate(0deg);
+}
+.middle-bar{
+    top: 24px;
+    left: 12px;
+    opacity: 1;
+}
+
+.bottom-bar {
+    top: 31px;
+    left: 12px;
+    transform: rotate(0deg);
+}
+.mobile-navbar{
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 48px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 48px);
+    background-color: black;
+    transition: 1s;
+}
+.mobile-navbar.active{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.mobile-link-group{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.mobile-link-group a{
+    color: rgb(255, 255, 255);
+    position: relative;
+    display: block;
+    text-decoration: none;
+    padding: 25px 30px;
+}
+/* mobile 選單出現 */
+
+@media (max-width: 767px) {
+    .links {
+        display: none;
+    }
+    .toggle{
+        display: block;
+    }
+}
+
+#banner{
+    width: 100%;
+    background-color: black;
+}
+
+.banner_all{
+    width: 100%;;
+    display:flex;
+}
+.banner_text{
+    width:43%;
+    background-color:black;
+}
+.banner_title{
+    font-size: 40px; 
+    line-height: 80px; 
+    color: rgb(79, 229, 255);
+    padding:100px 0 50px 0;
+}
+.banner_discription{
+    color:white;
+    width:93%;
+}
+.banner_discription p{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    margin: 0px 0px 24px 0;    
+}
+.banner_img{
+    width:57%;
+    height:100%;
+    background-color:black;   
+}
+.banner_img img{
+    width:354px;
+    height:603px;
+    margin:145px 0 60px 44px;
+}
+#inner{
+    overflow: hidden;
+}
+.inner_all{
+    display:flex;
+    height:384px;
+    position: relative;
+}
+.inner_all::before{
+    content: "";
+    display: block;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: -50%;
+    top: 0;
+    background-color: rgb(34, 128, 200);
+}
+.inner_all::after{
+    content: "";
+    display: block;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right: -50%;
+    top: 0;
+    background-color: rgb(95, 207, 99);
+}
+#inner a{
+    display: block;
+    text-decoration:none;
+    color: black;
+}
+
+.icon {
+    min-height: 96px;
+    width: 100%;
+    text-align: left;
+    flex: 1 1 auto;
+    padding: 26px 26px 64px 26px;   
+}
+
+.icon img {
+    width: 66px;
+    height:66px;
+}
+.text {
+    width: 100%;
+    height:180px;
+    flex: 0 0 auto;
+    padding: 0px 26px;
+}
+.text h2 {
+    font-size: 32px;
+    letter-spacing: -0.03rem;
+    line-height: 40px;
+    font-weight: 600;
+    margin: 0px 0px 26px ;   
+}
+
+.text p {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;  
+}
+
+.bottom {
+    height: 48px;
+    width: 100%;
+} 
+.bottom img {
+    margin: 0px 18px 0 26px;  
+}
+#inner span{
+    font-family:  "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+    letter-spacing: 0.01rem;
+    text-align: center;
+    line-height: 48px;
+}
+.platform1{
+    background-color: rgb(37, 142, 222);
+    width:25%;     
+}
+.platform1:hover{
+    background-color:rgb(12, 117, 197)
+}
+.platform2{
+    background-color: rgb(79, 229, 255);
+    width:25%; 
+}
+.platform2:hover{
+    background-color: rgb(54, 204, 230);
+}
+.platform3{
+    background-color: rgb(207, 143, 255);
+    width:25%;
+}
+.platform3:hover{
+    background-color:rgb(182, 118, 230);
+}
+
+.platform4{
+    background-color: rgb(105, 229, 110);
+    width:25%;  
+}
+.platform4:hover{
+    background-color: rgb(80, 204, 85);
+}
+#main_heading{
+    min-height:668px;
+    background-image: url("https://www.microsoft.com/design/fluent/assets/images/msft-verge-fluent.jpg");
+    background-attachment: fixed;
+    background-position: 50% center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h3{ 
+    font-size: 96px;
+    line-height: 120px;
+    margin:0px;
+    padding:20px 0;
+}
+
+.main_heading_content{
+    margin:55px 500px 0 0 ;
+    padding:0 100px 0 0 ;
+    font-weight:600;
+    line-height: 24px;
+}
+
+#main_sphere{
+    width: 100%;
+    background-color: rgb(25, 25, 25);
+    position: relative;
+}
+
+
+.rect_img img{
+    width:144px;
+    height:409px;
+    position: absolute;
+    right:30px;
+    top:-200px;
+}
+.line_img{
+    position: absolute;
+    top: 200px;
+    left: 300px;
+    pointer-events: none;
+    transform: translateY(300px);
+    transition: transform 600ms linear 0ms;
+}
+.line_img img{
+    width:3px;
+    height:110px;
+}
+.sphere_img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:60px 0 ;
+}
+.sphere_img img {
+    max-width: 100%;   
+}
+.sphere_content{
+    /* width:100%; */
+    background-color: rgb(25, 25, 25);
+    
+}
+.sphere_text{
+    width: 384px;
+    margin: 0px 0px 0px 750px;
+    padding: 0 16px 160px 16px;
+
+    
+}
+
+.sphere_text p{
+    margin: 0;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+}
+.image_powerful{
+    position: relative;
+    overflow: hidden;
+    padding:100px 0;
+    
+   
+}
+.title_powerful{
+    font-size: 60px;
+    line-height: 128px;
+    font-weight: 100;
+    position: absolute;
+    z-index: 4;
+    padding:238px 0 0 30px;
+    
+}
+
+.img_powerful{
+    opacity: 0.993143;
+    transform: scale(1.5, 1.5); 
+    
+}
+.img_powerful img{
+    width: 100%;
+}
+
+#main_cloud{
+    background-image: url('https://www.microsoft.com/design/fluent/assets/images/clouds.jpg');
+    background-position: 50% center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#main_cloud h2{
+    margin:0;
+}
+@media (max-width:1920px){
+    .diamond_cloud{
+        position: relative;
+    }
+    .diamond_solid{
+        position: absolute;
+        right:-200px;
+        top:-350px;
+        z-index:5;
+    }
+    .diamond_outline{
+        position: absolute;
+        right:-200px;
+        top:-250px;
+    }
+}
+
+@media (max-width:1680px){
+    .diamond_cloud{
+        position: relative;
+    }
+    .diamond_solid{
+        position: absolute;
+        right:-200px;
+        top:-350px;
+        z-index:5;
+    }
+    .diamond_outline{
+        position: absolute;
+        right:-200px;
+        top:-250px;
+    }
+}
+@media (max-width:1460px){
+    .diamond_cloud{
+        display:none;
+    }
+}
+
+.title_cloud1{
+    font-size: 200px;
+    line-height: 0.8;
+    color: rgb(0, 0, 0); 
+}
+.title_cloud2{
+    font-size: 200px;
+    line-height: 0.8;
+    color: rgb(0, 0, 0);
+    display:flex;
+    justify-content: flex-end;
+}
+.line_cloud{
+    padding:39px 0 330px 370px;
+}
+
+#main_engaging{
+    width: 100%;
+    background-color: rgb(204, 204, 204);
+    min-height: 820px;
+    position: relative;
+}
+.title_engaging{
+    padding:60px 0 0 8px;
+}
+.title_engaging h2{
+    font-size: 128px;
+    line-height: 150px;
+    font-weight: 600;
+    margin: 0;
+}
+.content_engaging{
+    width: 100%;
+    margin: 60px 0px 0px;
+}
+.text_engaging{
+    width: 100%;
+    max-width: 384px;
+    padding: 0px 16px;
+}
+.text_engaging p{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    margin: 0px;
+}
+.icons_engaging{
+    position: absolute;
+    right:0;
+    top:200px;    
+}
+.icons_engaging img{
+    max-width:50vw;
+}
+
+#main_space{
+    width: 100%;
+    min-height: 768px;
+    background-image: url('https://www.microsoft.com/design/fluent/assets/images/space.jpg');
+    background-attachment: fixed;
+    background-position: 50% center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+}
+#main_space .container{
+    position: relative;
+}
+.fluent_image_space{
+    position: absolute;
+    left: 340px;
+    top: -80px;  
+}
+.line_image_space{
+    position: absolute;
+    left: 65px;
+    top: 249px;
+
+}
+.whitereact_image_space{
+    position: absolute;
+    right: 60px;
+    top: 90px;
+
+
+}
+.whiteplane_image_space{
+    position: absolute;
+    right: 80px;
+    top: 540px;
+
+}
+.lilareact_image_space{
+    position: absolute;
+    right: 210px;
+    top: 370px;
+    z-index:5;
+}
+
+#media_style{
+    overflow: hidden;
+    padding-bottom: 160px;
+    background-color: black;
+    
+}
+.media_style_all{
+    display:flex;
+    height:384px;
+    position: relative;
+}
+.media_style_all::before{
+    content: "";
+    display: block;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: -50%;
+    top: 0;
+    background-color:black;
+}
+.media_style_all::after{
+    content: "";
+    display: block;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right: -50%;
+    top: 0;
+    background-color:black;
+    }
+
+
+#media_style a{
+    display: block;
+    text-decoration:none;
+    color: black;
+  }
+
+.style_text {
+    width: 100%;
+    height:180px;
+    flex: 0 0 auto;
+    padding: 16px;
+    
+
+  }
+  .style_text p {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 600;    
+    margin: 0;
+  }
+  .fontWhite{
+    color:white;
+  }
+.styleform1{
+    background-color: rgb(0, 0, 0);
+    width:25%;
+     
+}
+.styleform1:hover{
+    background-color: white;
+}
+.styleform1:hover .fontWhite{
+    color:black;   
+}
+
+.styleform2{
+    background-color: rgb(57, 57, 57);
+    width:25%; 
+}
+.styleform2:hover{
+    background-color: white;
+}
+.styleform2:hover .fontWhite{
+    color:black;
+}
+.styleform3{
+    background-color:rgb(118, 118, 118);
+    width:25%;
+}
+.styleform3:hover{
+    background-color: white;
+}
+
+.styleform4{
+    background-color: rgb(204, 204, 204);
+    width:25%;  
+}
+.styleform4:hover{
+    background-color: white;
+}
+
+.sorce_mark{
+    margin:160px 16px;
+    display:flex;
+}
+.sorce_mark_title label{
+    margin-left: 16px;
+}
+.styleform1 svg path{
+    fill:white;
+}
+.styleform1:hover svg path{
+    fill:black;
+}
+.styleform2 svg path{
+    fill:white;
+}
+.styleform2:hover svg path{
+    fill:black;
+}
+
+#news_style{
+    width:100%;
+    background-color: black;
+}
+.news_all{
+    width:100%;
+}
+.news_item{
+    width: 100%;
+    display: flex;
+    padding: 0px 0px 200px;
+} 
+.news_title{
+    width:50%;
+}
+.news_title h2{
+    font-size: 32px;
+    line-height: 40px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    padding: 0px 0px 0px 16px;
+}
+.news_content{
+    width: 50%;
+    padding: 0px 16px 35px;
+}
+.news_text{
+    width:100%;
+}
+.news_text p{
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+}
+.news_action{
+    width: 100%;
+    margin: 70px 0px 0px;
+}
+.news_action a{
+    display: flex;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.news_action a:hover{
+    color: rgb(255, 255, 255);
+    opacity: 0.6;
+}
+
+.news_action img{
+    margin: 0px 16px 0px 0px;
+}
+.news_action span{
+    font-size: 16px;
+    letter-spacing: 0.13rem;
+    line-height: 1;
+}
+
+#footer{
+    width: 100%;
+    height: 48px;
+    background-color:black;
+}
+#footer .container{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer_logo{
+    flex-grow: 1;
+    margin-right:68px;
+}
+.footer_nav{
+    height: 48px;
+    padding: 0px 100px 0px 0px;
+    flex-grow: 2;
+}
+.footer_nav ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.footer_nav ul li{
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0px;
+    padding: 0px;
+    line-height: 48px;
+}
+.footer_nav ul li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.footer_social svg{
+    margin: 0 10px;
+    fill:white;
+}
